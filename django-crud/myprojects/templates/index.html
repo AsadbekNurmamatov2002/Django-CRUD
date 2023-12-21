@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        {% include 'search.html' %}
+                    </div>
+                </div>
+                <table class="table table-striped table-hover table-bordered">
+                  
+                   <form action="{% url 'home' %}" method="post">
+                    {% csrf_token %}
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th> ISM<i class="fa fa-sort"></i></th>
+                            <th>FAMILYA</th>
+                            <th> MANZIL <i class="fa fa-sort"></i></th>
+                            <th>MAMLAKAT</th>
+                            <th>YOSH <i class="fa fa-sort"></i></th>
+                            <th>Actions</th>
+                        </tr>
+                        {% if not studentform.instance.id %}
+                        <tr>
+                            <td>ID</td>
+                           {% include 'save.html' %}
+                        </tr>
+                        {% endif %}
+                    </thead>
+                    <tbody>
+
+                      {% for S in student %}
+                        <tr>
+                            {% if studentform.instance.id == S.id %}
+                            <td>{{ S.id }}</td>
+                            {% include 'save.html' %}
+                            {% else %}
+                            <td>{{ S.id }}</td>
+                            <td> {{ S.ism }}</td>
+                            <td>{{ S.familya }}</td>
+                            <td>{{ S.manzil }}</td>
+                            <td>{{S.mamlakat }}</td>
+                            <td>{{S.yoshi}}</td>
+                            <td>
+                                <button formnovalidate name="edit" value="{{ S.id }}" ><a href="?page={{ student.paginator.num_pages }}" class="edit" title="Edit" data-toggle="tooltip"></a> <i class="material-icons">&#xE254;</i></a> </button>
+                                <button formnovalidate name="delete" value="{{ S.id }}" > <a><i class="material-icons">&#xE872;</i></a></button>
+                            </td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                                
+                    </tbody>
+                    </form>
+                    
+                </table>
+                {% include 'paginator.html' %}
+            </div>
+        </div>        
+    </div>     
+{% endblock content %}
