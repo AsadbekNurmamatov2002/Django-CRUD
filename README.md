@@ -3,7 +3,7 @@ __mavzu: Django orqali crud amallari, search, message va paginatorlar__
 ### table ko'rinishi
 ![image](https://github.com/AsadbekNurmamatov2002/Django-CRUD/assets/144318530/5ec40736-d581-4cb7-9b7d-0ea89d671801)
 
-### **Paginator**
+### sahifalar -**Paginator** 
 ![image](https://github.com/AsadbekNurmamatov2002/Django-CRUD/assets/144318530/78152f9b-c7b7-4731-9e2c-fec055bae5df)
 ### Qidirish amali-Search 
 ![image](https://github.com/AsadbekNurmamatov2002/Django-CRUD/assets/144318530/9179de8b-d2ca-4941-8ab6-188752f72749)
