@@ -1,4 +1,5 @@
 # Django-CRUD oddiyor crud amallarini ko'rib chiqamiz
+__mavzu: Django orqali crud amallari, search, message va paginatorlar__
 ### table ko'rinishi
 ![image](https://github.com/AsadbekNurmamatov2002/Django-CRUD/assets/144318530/7306d002-d217-4061-9a09-d4cd7abeb6a7)
 ### **Paginator**
