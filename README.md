@@ -14,5 +14,4 @@ __mavzu: Django orqali crud amallari, search, message va paginatorlar__
 
 
 
-
   `
